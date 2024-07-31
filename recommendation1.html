@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #007bff, #00bfff); /* Blue gradient */
+            color: #333; /* Set text color to a dark tone */
+            animation: changeBackground 10s infinite alternate; /* Animation */
+        }
+
+        @keyframes changeBackground {
+            0% {
+                background-color: #007bff; /* Start color */
+            }
+            100% {
+                background-color: #00bfff; /* End color */
+            }
+        }
+
+        h1 {
+            color: #fff; /* Set heading color to white */
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px; /* Increase font size for emphasis */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+        }
+
+        h3 {
+            color: #fff; /* Set heading color to white */
+            text-align: center;
+            font-size: 24px; /* Increase font size for emphasis */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 30px; /* Add space between heading and list */
+        }
+
+        li {
+            position: relative; /* Relative positioning for numbering */
+            margin-bottom: 10px;
+            font-size: 18px; /* Increase font size for readability */
+            background-color: rgba(255, 255, 255, 0.9); /* Set background color with transparency */
+            padding: 15px; /* Increase padding for better spacing */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+            max-width: 80%; /* Limit maximum width of the box */
+            margin-left: auto; /* Align to the right */
+            margin-right: auto; /* Align to the left */
+            transition: all 0.3s ease; /* Smooth transition effect */
+        }
+
+        li:hover {
+            transform: translateY(-5px); /* Move the list item up on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow on hover */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>We recommend reading the following papers:</h1>
+    <h3>Based on the paper: "{{ input_paper }}"</h3>
+    <ul>
+        <li>1. {{ recommend_papers[0] }}</li>
+        <li>2. {{ recommend_papers[1] }}</li>
+        <li>3. {{ recommend_papers[2] }}</li>
+        <li>4. {{ recommend_papers[3] }}</li>
+        <li>5. {{ recommend_papers[4] }}</li>
+    </ul>
+</body>
+</html>
