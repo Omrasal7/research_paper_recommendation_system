@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            background: linear-gradient(135deg, #4CAF50, #2E8B57);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background: linear-gradient(135deg, #45a049, #2E8B57);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Research Paper Recommendation</h1>
+    <form action="/recommendation" method="post">
+        <label for="input_paper">Enter the title of any paper you like:</label><br>
+        <input type="text" id="input_paper" name="input_paper"><br><br>
+        <input type="submit" value="Get Recommendations">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
